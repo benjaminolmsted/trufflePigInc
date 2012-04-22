@@ -11,7 +11,7 @@ gem 'rails_autolink' # auto_link was moved out of rails into this gem
    gem 'heroku'
      gem 'thin' # faster and more reliable than webrick, used by Heroku on production
 
-gem 'sqlite3'
+gem 'pg'
 
 ########################
 ##### Debug
