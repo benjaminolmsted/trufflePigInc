@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @project.title %>
+</p>
+
+<p>
+  <b>Desc:</b>
+  <%= @project.desc %>
+</p>
+
+<p>
+  <b>Pic:</b>
+  <%= @project.pic %>
+</p>
+
+<p>
+  <b>Alt text:</b>
+  <%= @project.alt_text %>
+</p>
+
+<p>
+  <b>Caption:</b>
+  <%= @project.caption %>
+</p>
+
+<p>
+  <b>Gallery link:</b>
+  <%= @project.gallery_link %>
+</p>
+
+<p>
+  <b>Featured:</b>
+  <%= @project.featured %>
+</p>
+
+<p>
+  <b>Published at:</b>
+  <%= @project.published_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
