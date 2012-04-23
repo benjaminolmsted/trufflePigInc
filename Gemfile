@@ -13,6 +13,12 @@ gem 'rails_autolink' # auto_link was moved out of rails into this gem
 
 gem 'pg'
 
+######
+## NICE TO HAVE YOU
+############
+  gem 'actionpack', '>= 3.1'
+  gem 'less-rails', '~> 2.2.0'
+  gem 'railties', '>= 3.1'
 ########################
 ##### Debug
 #############
@@ -30,6 +36,9 @@ gem 'pry', :groups => [ :development, :test ] # debugger; replaced IRB in develo
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
+	
+  gem 'twitter-bootstrap-rails'
+
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platform => :ruby

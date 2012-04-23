@@ -1,45 +1,41 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = @project.class -%>
+<h1><%=t '.title', :default => @project.title %></h1>
 
 <p>
-  <b>Title:</b>
-  <%= @project.title %>
+  
+  <img src="<%=asset_path @project.pic %>" alt="<%= @project.alt_text %>" width='900'>
+  <%= @project.pic %>
+</br>
+  <%= @project.caption %>
+
 </p>
 
 <p>
-  <b>Desc:</b>
   <%= @project.desc %>
 </p>
 
-<p>
-  <b>Pic:</b>
-  <%= @project.pic %>
-</p>
 
 <p>
-  <b>Alt text:</b>
-  <%= @project.alt_text %>
-</p>
-
-<p>
-  <b>Caption:</b>
-  <%= @project.caption %>
-</p>
-
-<p>
-  <b>Gallery link:</b>
+  <strong><%= model_class.human_attribute_name(:gallery_link) %>:</strong><br>
   <%= @project.gallery_link %>
 </p>
-
 <p>
-  <b>Featured:</b>
+  <strong><%= model_class.human_attribute_name(:featured) %>:</strong><br>
   <%= @project.featured %>
 </p>
-
 <p>
-  <b>Published at:</b>
+  <strong><%= model_class.human_attribute_name(:published_at) %>:</strong><br>
   <%= @project.published_at %>
 </p>
 
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<div class="form-actions">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              projects_path, :class => 'btn'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_project_path(@project), :class => 'btn' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              project_path(@project),
+              :method => 'delete',
+              :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+              :class => 'btn btn-danger' %>
+</div>
